@@ -22,7 +22,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>edu.fh.ostfalia.teama.Application</mainClass>
+                            <mainClass>edu.fh.ostfalia.bodemann.examplehibernatemysqlwithlogin.App</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>

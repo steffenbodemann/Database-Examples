@@ -26,7 +26,6 @@ public class DialogDatabaseLoginController {
     }
 
     public boolean logIn() {
-        SchemaConnection sC = SchemaConnection.getInstance();
         
         //JDBC
         SchemaConnection.setPWD(dialog.getPassword());
@@ -35,6 +34,7 @@ public class DialogDatabaseLoginController {
         SessionManager.setPWD(dialog.getPassword());
         SessionManager.setUSER(dialog.getUsername());
 
+        SchemaConnection sC = SchemaConnection.getInstance();
 
         if (sC.getconnectionEstablished() == false) {
             dialog.getStatusLabel().setText("Falsche Logindaten!");
