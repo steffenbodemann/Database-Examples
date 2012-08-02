@@ -26,6 +26,8 @@ public class DialogDatabaseLoginController {
     }
 
     public boolean logIn() {
+        SchemaConnection sC = SchemaConnection.getInstance();
+        
         //JDBC
         SchemaConnection.setPWD(dialog.getPassword());
         SchemaConnection.setUSER(dialog.getUsername());
@@ -34,15 +36,14 @@ public class DialogDatabaseLoginController {
         SessionManager.setUSER(dialog.getUsername());
 
 
-        SchemaConnection sC = SchemaConnection.getInstance();
-
         if (sC.getconnectionEstablished() == false) {
             dialog.getStatusLabel().setText("Falsche Logindaten!");
             dialog.getStatusLabel().setForeground(Color.RED.brighter());
         } else {
             dialog.getStatusLabel().setText("Login erfolgreich");
             dialog.getStatusLabel().setForeground(Color.GREEN.darker());
-
+              
+//            Das Schema wird in der Main erstellt!
 //            sC.useDatabase_Befehl("CREATE SCHEMA if not exists SteffenTest");
 
 

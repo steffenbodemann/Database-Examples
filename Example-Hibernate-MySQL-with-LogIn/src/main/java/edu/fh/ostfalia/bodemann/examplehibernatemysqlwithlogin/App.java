@@ -16,7 +16,7 @@ public class App
         if (connectionEstablished) {
 //            ProjectContainer.getInstance(); //laden aus der DB
 //            new ViewApplicationFrame();
-            SchemaConnection.getInstance().useDatabase_Befehl("CREATE SCHEMA if not exists SteffenTestTest");
+            SchemaConnection.getInstance().useDatabase_Befehl("CREATE SCHEMA if not exists Hibenate_MySQL_Example");
         }
     }
 }
